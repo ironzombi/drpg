@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+
 class Character
   attr_reader :name, :max_health
   attr_accessor :health
