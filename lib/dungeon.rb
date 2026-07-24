@@ -53,3 +53,42 @@ class Player < Character
     true
   end
 end
+
+class Enemy < Character
+  attr_reader :gold_reward
+
+  def initialize(name:, health:, attack:, gold_reward:)
+    super(
+      name: name,
+      health: health,
+      attack: attack
+    )
+
+    @gold_reward = gold_reward
+  end
+
+  def self.random
+    enemy_type = [
+      {
+        name: "Goblin",
+        health: 10,
+        attack: 4,
+        gold_reward: 5
+      },
+      {
+        name: "Skeleton",
+        health: 14,
+        attack: 5,
+        gold_reward: 8
+      },
+      {
+        name: "Orc",
+        health: 20,
+        attack: 7,
+        gold_reward: 12
+      }
+    ]
+
+    new(**enemy_type.sample)
+  end
+end
