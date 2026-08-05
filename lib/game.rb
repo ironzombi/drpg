@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './dungeon.rb'
-require './env.rb'
+require './characters.rb'
+require './environment.rb'
 
 Game.new.start
