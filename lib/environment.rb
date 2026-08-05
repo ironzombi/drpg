@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
 
 class Room
   attr_reader :number, :enemy
