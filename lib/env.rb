@@ -107,10 +107,20 @@ class Game
     puts "Room: #{@current_room_index + 1}/#{ROOM_COUNT}"
     puts "------------------------------------"
   end
+  
+  def encounter_message(enemy)
+    messages = [
+      "A #{enemy.name} blocks your path!",
+      "Your path is blocked by a #{enemy.name}",
+      "An angry #{enemy.name} has ambushed you!"
+    ]
+
+    puts messages.sample
+  end
 
   def battle(enemy)
     puts
-    puts "A #{enemy.name} blocks your path!"
+    encounter_message(enemy)
 
     while enemy.alive? && @player.alive?
       puts
